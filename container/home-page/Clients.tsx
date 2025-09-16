@@ -81,7 +81,7 @@ export default function Clients() {
 											<Button
 												href={link.href}
 												title={link.title}
-												key={link.id}
+												key={`${item.id}-${link.id}-${idx}` }
 											/>
 										</motion.div>
 									)}
