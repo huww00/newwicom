@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { aboutImg } from "@/public";
 import { LinkHover } from "@/animation";
 import { footerItems } from "@/constants";
@@ -9,6 +9,26 @@ import { Heading, RoundButton } from "@/components";
 export default function About() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const [mounted, setMounted] = useState(false);
+  const [particles, setParticles] = useState<{
+    size: number;
+    top: number;
+    left: number;
+    duration: number;
+    delay: number;
+  }[]>([]);
+
+  useEffect(() => {
+    setMounted(true);
+    const generated = Array.from({ length: 12 }).map(() => ({
+      size: Math.random() * 15 + 5,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      duration: Math.random() * 15 + 10,
+      delay: Math.random() * 5,
+    }));
+    setParticles(generated);
+  }, []);
 
   // Example images (replace with your own imports or URLs)
   const images = [
@@ -27,20 +47,20 @@ export default function About() {
         <div className="absolute top-10% left-5% w-80 h-80 bg-blue-100/40 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10% right-5% w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl"></div>
         
-        {/* Floating particles */}
-        {[...Array(12)].map((_, i) => (
+        {/* Floating particles (client-only to avoid SSR hydration mismatches) */}
+        {mounted && particles.map((p, i) => (
           <div
             key={i}
             className="absolute rounded-full bg-blue-200/40"
             style={{
-              width: Math.random() * 15 + 5 + 'px',
-              height: Math.random() * 15 + 5 + 'px',
-              top: Math.random() * 100 + '%',
-              left: Math.random() * 100 + '%',
-              animation: `floatParticle ${Math.random() * 15 + 10}s infinite ease-in-out`,
-              animationDelay: Math.random() * 5 + 's'
+              width: `${p.size}px`,
+              height: `${p.size}px`,
+              top: `${p.top}%`,
+              left: `${p.left}%`,
+              animation: `floatParticle ${p.duration}s infinite ease-in-out`,
+              animationDelay: `${p.delay}s`,
             }}
-          ></div>
+          />
         ))}
       </div>
 
