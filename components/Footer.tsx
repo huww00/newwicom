@@ -1,12 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import { logo } from "@/public";
 import { LinkHover, TextMask } from "@/animation";
 import { footerItems, footernavbarItems } from "@/constants";
 
 export default function Footer() {
-	const phrase = ["Eye-", "opening"];
-	const phrase1 = ["PRESENTATIONS"];
+	const phrase = ["Always-", "Connected"];
+	const phrase1 = ["TELECOM SOLUTIONS"];
 	
 	return (
 		<footer className="w-full min-h-screen padding-x z-30 relative pt-[40px] bg-gradient-to-b from-blue-600 to-blue-800 flex flex-col justify-between rounded-t-[20px] mt-[-20px] transform-gpu perspective-1000">
@@ -84,7 +83,7 @@ export default function Footer() {
 								E:
 							</h1>
 							<LinkHover
-								title="hello@IcomTelecom"
+								title="hello@icomtelecom.com"
 								href="/"
 								className="before:h-[1px] after:h-[1px] paragraph font-medium text-white/90 hover:text-white before:bottom-[-3px] after:bottom-[-3px] before:bg-white/50 after:bg-white"
 							/>
@@ -100,12 +99,13 @@ export default function Footer() {
 				<div className="w-1/2 sm:w-full xm:w-full transform-gpu hover:-translate-y-1 transition-transform duration-300">
 					<Link href={"/"}>
 						<div className="relative">
-							<Image
-								src={logo}
+							<img
+								src={logo.src}
 								alt="IcomTelecom logo"
 								width={70}
 								height={70}
 								className="drop-shadow-lg filter brightness-125 transform-gpu hover:scale-110 transition-transform duration-500"
+								loading="lazy"
 							/>
 							{/* 3D shine effect on logo */}
 							<div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>

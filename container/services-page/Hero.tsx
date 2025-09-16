@@ -46,17 +46,7 @@ export default function Hero() {
 						transition={{ duration: 0.8, delay: 0.5 }}
 					>
 						<p className="w-[80%] sm:w-full xm:w-full sub-heading font-normal padding-x font-NeueMontreal text-gray-700 padding-y leading-relaxed">
-							We create&nbsp;
-							<span className="relative group cursor-pointer">
-								<span className="text-gray-900 font-medium relative z-10">eye-catching</span>
-								<span className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-lg transform group-hover:scale-105 transition-transform duration-300 -z-10"></span>
-							</span>
-							&nbsp;and&nbsp;
-							<span className="relative group cursor-pointer">
-								<span className="text-gray-900 font-medium relative z-10">eye-opening</span>
-								<span className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-red-400/20 rounded-lg transform group-hover:scale-105 transition-transform duration-300 -z-10"></span>
-							</span>
-							&nbsp;presentations that educate, inspire and influence action.
+							We deliver secure, scalable telecommunications — 5G, fiber, cloud voice, and enterprise connectivity — built to power modern business.
 						</p>
 					</motion.div>
 					
@@ -90,7 +80,7 @@ export default function Hero() {
 										whileHover={{ y: -5, transition: { duration: 0.2 } }}
 									>
 										<p className="paragraph font-NeueMontreal text-gray-900 underline decoration-blue-400 decoration-2">
-											Goal defines it all
+											Business needs first
 										</p>
 										<p className="paragraph font-NeueMontreal text-gray-700 leading-relaxed">
 											What do you want to achieve?
@@ -108,7 +98,7 @@ export default function Hero() {
 										transition={{ delay: 0.1 }}
 									>
 										<p className="paragraph font-NeueMontreal text-gray-900 underline decoration-purple-400 decoration-2">
-											Audience is the hero
+											Users and locations
 										</p>
 										<p className="paragraph font-NeueMontreal text-gray-700 leading-relaxed">
 											Who is it for? What do they want? Why
@@ -130,7 +120,7 @@ export default function Hero() {
 										transition={{ delay: 0.2 }}
 									>
 										<p className="paragraph font-NeueMontreal text-gray-900 underline decoration-amber-400 decoration-2">
-											Context makes a difference
+											Deployment context matters
 										</p>
 										<p className="paragraph font-NeueMontreal text-gray-700 leading-relaxed">
 											When do you present? Online or live? At a
