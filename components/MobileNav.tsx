@@ -53,7 +53,7 @@ export default function MobileNav() {
 								<Link
 									href={item.href}
 									key={item.id}
-									onClick={(toggle) => setToggle(!toggle)}
+									onClick={() => setToggle(false)}
 									className="text-[80px] leading-[67px] font-FoundersGrotesk uppercase font-bold tracking-[-.9] text-background">
 									{item.title}
 								</Link>
