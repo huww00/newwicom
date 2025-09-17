@@ -1,5 +1,6 @@
 import React from "react";
 import ServicePage from "../../components/ServicePage";
+import { MotionCard, MotionSection } from "../../components/Motion";
 
 export default function TelephonieMobile() {
   return (
