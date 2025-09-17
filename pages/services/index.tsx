@@ -6,6 +6,7 @@ import {
 	Process,
 	Archive,
 	Heroservices,
+	SecondaryHeader,
 } from "@/container";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
