@@ -1,4 +1,5 @@
 import React from "react";
+import { MotionCard, MotionImage, MotionSection } from "./Motion";
 
 export type ServiceSection = {
   title: string;
