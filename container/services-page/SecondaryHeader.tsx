@@ -10,12 +10,12 @@ const categories: Category[] = [
     key: "solutions-mobiles",
     title: "Solutions Mobiles",
     links: [
-      { label: "Téléphonie mobile", href: "https://www.groupesaph.com/telephonie-mobile/", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/telephonie-mobile-600x380.png", alt: "Téléphonie mobile" },
-      { label: "Internet mobile", href: "https://www.groupesaph.com/internet-mobile/", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/internet-mobile-800x506.png", alt: "Internet mobile" },
-      { label: "Gestion et sécurité des terminaux mobiles", href: "https://www.groupesaph.com/gestion-et-securite-des-terminaux-mobiles/", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/terminaux-mobiles-800x506.png", alt: "Gestion et sécurité des terminaux mobiles" },
-      { label: "Location de smartphone", href: "https://www.groupesaph.com/location-de-smartphone/", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/location-de-smartphone-600x380.png", alt: "Location de smartphone" },
-      { label: "Recyclage et équipements reconditionnés", href: "https://www.groupesaph.com/equipements-reconditionnes/", image: "https://www.groupesaph.com/wp-content/uploads/2025/09/equipements-reconditionnes-800x506.png", alt: "Recyclage et équipements reconditionnés" },
-      { label: "Infogérance Mobile", href: "https://www.groupesaph.com/flotte-mobile/", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/partenaires-800x506.png", alt: "Infogérance Mobile" },
+      { label: "Téléphonie mobile", href: "/services/telephonie-mobile", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/telephonie-mobile-600x380.png", alt: "Téléphonie mobile" },
+      { label: "Internet mobile", href: "/services/internet-mobile", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/internet-mobile-800x506.png", alt: "Internet mobile" },
+      { label: "Gestion et sécurité des terminaux mobiles", href: "/services/gestion-et-securite-des-terminaux-mobiles", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/terminaux-mobiles-800x506.png", alt: "Gestion et sécurité des terminaux mobiles" },
+      { label: "Location de smartphone", href: "/services/location-de-smartphone", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/location-de-smartphone-600x380.png", alt: "Location de smartphone" },
+      { label: "Recyclage et équipements reconditionnés", href: "/services/equipements-reconditionnes", image: "https://www.groupesaph.com/wp-content/uploads/2025/09/equipements-reconditionnes-800x506.png", alt: "Recyclage et équipements reconditionnés" },
+      { label: "Infogérance Mobile", href: "/services/flotte-mobile", image: "https://www.groupesaph.com/wp-content/uploads/2025/08/partenaires-800x506.png", alt: "Infogérance Mobile" },
     ],
   },
   {
