@@ -46,7 +46,7 @@ export default function SecondaryHeader() {
   return (
     <header className="w-full bg-white/70 backdrop-blur-md border-b border-gray-200/70 py-2 relative z-40 mt-[8vh]">
       <div className="w-full padding-x">
-        <nav className="flex items-center gap-8">
+        <nav className="flex items-center justify-center gap-8">
           {categories.map((cat) => (
             <div key={cat.key} className="group relative">
               <button className="flex items-center gap-2 py-3 px-2 text-[15px] font-medium text-gray-800 hover:text-gray-900">
