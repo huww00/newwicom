@@ -55,7 +55,7 @@ export default function SecondaryHeader() {
                 <svg className="w-3.5 h-3.5 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
               </button>
 
-              <ul className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[1200px] max-w-[92vw] bg-white rounded-[28px] border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,0.1)] p-8 grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 pointer-events-none opacity-0 translate-y-2 transition-all duration-200 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto z-50 max-h-[75vh] overflow-y-auto">
+              <ul className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[1200px] max-w-[96vw] bg-white rounded-[24px] border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,0.1)] p-6 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 pointer-events-none opacity-0 translate-y-2 transition-all duration-200 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto z-50 max-h-[85vh] overflow-y-auto overscroll-contain">
                 {cat.links.map((link) => (
                   <li key={`${cat.key}-${link.label}`}>
                     <a
@@ -64,8 +64,8 @@ export default function SecondaryHeader() {
                       rel={link.external ? "noopener" : undefined}
                       className="group/card block"
                     >
-                      <div className="rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-4 flex flex-col items-center">
-                        <img src={link.image} alt={link.alt} className="w-72 h-44 object-contain" loading="lazy" />
+                      <div className="rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-3 flex flex-col items-center">
+                        <img src={link.image} alt={link.alt} className="w-60 h-36 object-contain" loading="lazy" />
                         <p className="mt-3 text-center text-[15px] text-gray-800 font-medium">{link.label}</p>
                       </div>
                     </a>
