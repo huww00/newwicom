@@ -114,7 +114,7 @@ export default function ServiceContactForm() {
       </fieldset>
 
       <div className="mt-6 border-t border-gray-200 pt-6">
-        <h3 className="text-base font-semibold font-FoundersGrotesk">Informations</h3>
+        <h3 className="text-base font-semibold font-FoundersGrotesk">Les informations houma</h3>
         <div className="mt-4 grid grid-cols-1 gap-4">
           <div>
             <label htmlFor="company" className="block text-sm text-gray-700">Raison sociale</label>
