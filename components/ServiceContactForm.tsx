@@ -10,6 +10,7 @@ type FormState = {
   phone: string;
   email: string;
   comments: string;
+  otherRequest?: string;
   file?: File | null;
 };
 
@@ -21,6 +22,7 @@ const initialState: FormState = {
   phone: "",
   email: "",
   comments: "",
+  otherRequest: "",
   file: null,
 };
 
@@ -49,6 +51,7 @@ export default function ServiceContactForm() {
     if (!data.fullName.trim()) return "Veuillez indiquer votre nom et prénom.";
     if (!data.phone.trim()) return "Veuillez indiquer votre numéro de téléphone.";
     if (!/^\S+@\S+\.\S+$/.test(data.email)) return "Veuillez saisir une adresse mail valide.";
+    if (data.type === "Autres demande" && !data.otherRequest?.trim()) return "Veuillez préciser votre demande.";
     return null;
   };
 
@@ -112,6 +115,21 @@ export default function ServiceContactForm() {
           ))}
         </div>
       </fieldset>
+
+      {data.type === "Autres demande" ? (
+        <div className="mt-6">
+          <label htmlFor="otherRequest" className="block text-sm text-gray-700">Précisez votre demande</label>
+          <textarea
+            id="otherRequest"
+            name="otherRequest"
+            rows={3}
+            required
+            value={data.otherRequest}
+            onChange={onChange}
+            className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2.5 outline-none focus:ring-2 focus:ring-primary/50"
+          />
+        </div>
+      ) : null}
 
       <div className="mt-6 border-t border-gray-200 pt-6">
         <h3 className="text-base font-semibold font-FoundersGrotesk">Les informations houma</h3>
