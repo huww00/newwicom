@@ -1,6 +1,7 @@
 import React from "react";
 import ServicePage from "../../components/ServicePage";
 import { MotionCard, MotionSection } from "../../components/Motion";
+import ServiceContactForm from "../../components/ServiceContactForm";
 
 export default function ReseauxVpnSdwan() {
   return (
@@ -24,7 +25,7 @@ export default function ReseauxVpnSdwan() {
 
             <MotionCard className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
               <h2 className="text-2xl font-semibold font-FoundersGrotesk">Sécurité</h2>
-              <p className="mt-4 text-gray-700 font-NeueMontreal">Segmentation, tunnels chiffrés, pare‑feu/UTM et intégration SASE.</p>
+              <p className="mt-4 text-gray-700 font-NeueMontreal">Segmentation, tunnels chiffrés, pare��feu/UTM et intégration SASE.</p>
             </MotionCard>
 
             <MotionCard className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
