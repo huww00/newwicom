@@ -1,6 +1,7 @@
 import React from "react";
 import ServicePage from "../../components/ServicePage";
 import { MotionCard, MotionImage, MotionSection } from "../../components/Motion";
+import ServiceContactForm from "../../components/ServiceContactForm";
 
 export default function LocationDeSmartphone() {
   return (
