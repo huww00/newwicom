@@ -6,7 +6,7 @@ export default function TelephonieMobile() {
   return (
     <>
       <ServicePage
-        title="Votre téléphonie mobile prend une nouvelle dimension !"
+        title="Votre telephonie mobile prend une nouvelle dimension !"
         description="Solutions de téléphonie mobile professionnelles sous l’égide de SFR Business. Offres, forfaits et smartphones pour entreprises avec outils pensés pour rendre vos équipes plus mobiles et performantes."
         heroImage="https://www.groupesaph.com/wp-content/uploads/2025/08/telephonie-mobile-scaled.png"
         sections={[
