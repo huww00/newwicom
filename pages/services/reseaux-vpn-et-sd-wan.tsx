@@ -25,7 +25,7 @@ export default function ReseauxVpnSdwan() {
 
             <MotionCard className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
               <h2 className="text-2xl font-semibold font-FoundersGrotesk">Sécurité</h2>
-              <p className="mt-4 text-gray-700 font-NeueMontreal">Segmentation, tunnels chiffrés, pare��feu/UTM et intégration SASE.</p>
+              <p className="mt-4 text-gray-700 font-NeueMontreal">Segmentation, tunnels chiffrés, pare‑feu/UTM et intégration SASE.</p>
             </MotionCard>
 
             <MotionCard className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
@@ -37,18 +37,7 @@ export default function ReseauxVpnSdwan() {
           <aside className="lg:col-span-2">
             <div className="sticky top-24">
               <MotionCard className="bg-gray-50 border border-gray-200 rounded-2xl p-4 shadow-sm">
-                <div className="aspect-[3/4] w-full overflow-hidden rounded-xl border border-gray-200">
-                  <iframe
-                    src="https://tally.so/embed/mZzGlo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    marginHeight={0}
-                    marginWidth={0}
-                    title="Site Saph Expertise"
-                    scrolling="no"
-                  />
-                </div>
+                <ServiceContactForm />
               </MotionCard>
             </div>
           </aside>
