@@ -26,7 +26,21 @@ export default function ServicePage({ title, description, heroImage, sections = 
           {heroImage ? (
             <MotionImage direction="left" className="w-full">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={heroImage} alt={title} className="w-full h-auto rounded-2xl border border-gray-200 shadow-sm object-cover" loading="lazy" />
+              <img
+                src={heroImage}
+                alt={title}
+                className="w-full h-auto rounded-2xl border border-gray-200 shadow-sm object-cover"
+                loading="lazy"
+                onError={(e) => {
+                  const el = e.currentTarget as HTMLImageElement;
+                  if (el.dataset.fallback === "1") return;
+                  try {
+                    const u = new URL(el.src);
+                    el.src = `https://images.weserv.nl/?url=${u.host}${u.pathname}`;
+                    el.dataset.fallback = "1";
+                  } catch {}
+                }}
+              />
             </MotionImage>
           ) : null}
         </div>
@@ -50,7 +64,21 @@ export default function ServicePage({ title, description, heroImage, sections = 
                     {sec.imageUrls.map((url) => (
                       <MotionImage key={url}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={url} alt={sec.title} className="w-full h-40 object-contain bg-white rounded-xl border border-gray-200 p-3" loading="lazy" />
+                        <img
+                          src={url}
+                          alt={sec.title}
+                          className="w-full h-40 object-contain bg-white rounded-xl border border-gray-200 p-3"
+                          loading="lazy"
+                          onError={(e) => {
+                            const el = e.currentTarget as HTMLImageElement;
+                            if (el.dataset.fallback === "1") return;
+                            try {
+                              const u = new URL(el.src);
+                              el.src = `https://images.weserv.nl/?url=${u.host}${u.pathname}`;
+                              el.dataset.fallback = "1";
+                            } catch {}
+                          }}
+                        />
                       </MotionImage>
                     ))}
                   </div>
