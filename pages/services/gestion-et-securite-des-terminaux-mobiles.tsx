@@ -8,7 +8,7 @@ export default function GestionSecuriteTerminaux() {
       <ServicePage
         title="Gestion et sécurité des terminaux mobiles assurée !"
         description="Protégez les données de l’entreprise et de vos collaborateurs. Déployez, sécurisez et supervisez votre flotte de smartphones et tablettes avec une gestion centralisée."
-        heroImage="https://www.groupesaph.com/wp-content/uploads/2025/09/terminaux-mobiles-scaled.png"
+        heroImage="https://images.weserv.nl/?url=www.groupesaph.com/wp-content/uploads/2025/09/terminaux-mobiles-scaled.png"
         sections={[
           {
             title: "Objectifs clés",
