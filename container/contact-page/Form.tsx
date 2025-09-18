@@ -19,7 +19,7 @@ export default function Form() {
           <input
             type="text"
             placeholder="Enter your name"
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-blue-400 focus:outline-none shadow-sm hover:shadow-md transition-all"
+            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-primary/50 focus:outline-none shadow-sm hover:shadow-md transition-all"
           />
         </div>
 
@@ -31,7 +31,7 @@ export default function Form() {
           <input
             type="text"
             placeholder="Enter your company"
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-blue-400 focus:outline-none shadow-sm hover:shadow-md transition-all"
+            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-primary/50 focus:outline-none shadow-sm hover:shadow-md transition-all"
           />
         </div>
 
@@ -43,7 +43,7 @@ export default function Form() {
           <textarea
             placeholder="Describe your project or goal..."
             rows={4}
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-blue-400 focus:outline-none shadow-sm hover:shadow-md transition-all"
+            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-primary/50 focus:outline-none shadow-sm hover:shadow-md transition-all"
           />
         </div>
 
@@ -54,7 +54,7 @@ export default function Form() {
           </label>
           <input
             type="date"
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-blue-400 focus:outline-none shadow-sm hover:shadow-md transition-all"
+            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-primary/50 focus:outline-none shadow-sm hover:shadow-md transition-all"
           />
         </div>
 
@@ -63,7 +63,7 @@ export default function Form() {
           <label className="block text-sm font-semibold text-gray-700 mb-2">
             Budget Range
           </label>
-          <select className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-blue-400 focus:outline-none shadow-sm hover:shadow-md transition-all">
+          <select className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-primary/50 focus:outline-none shadow-sm hover:shadow-md transition-all">
             <option value="">Select...</option>
             <option value="under-5k">Under $5,000</option>
             <option value="5k-10k">$5,000 - $10,000</option>
@@ -79,7 +79,7 @@ export default function Form() {
           <input
             type="email"
             placeholder="name@example.com"
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-blue-400 focus:outline-none shadow-sm hover:shadow-md transition-all"
+            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-primary/50 focus:outline-none shadow-sm hover:shadow-md transition-all"
           />
         </div>
 
@@ -91,7 +91,7 @@ export default function Form() {
           <textarea
             placeholder="Add more details if necessary..."
             rows={3}
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-blue-400 focus:outline-none shadow-sm hover:shadow-md transition-all"
+            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:ring-4 focus:ring-primary/50 focus:outline-none shadow-sm hover:shadow-md transition-all"
           />
         </div>
 
@@ -100,21 +100,21 @@ export default function Form() {
           <div className="flex items-center gap-2">
             <input
               type="checkbox"
-              className="h-4 w-4 text-blue-600 focus:ring-blue-400 rounded"
+              className="h-4 w-4 text-primary focus:ring-primary/50 rounded"
             />
             <p className="text-sm text-gray-600">
               I agree with the{" "}
-              <Link href="/privacy" className="text-blue-600 underline hover:text-blue-700">
+              <Link href="/privacy" className="text-primary underline hover:opacity-90">
                 Privacy Policy
               </Link>
             </p>
           </div>
 
           <RoundButton
-            bgcolor="#2563eb"
+            bgcolor="#E30613"
             href="/"
             title="Send Inquiry"
-            className="bg-blue-600 text-white px-6 py-3 rounded-full shadow-[0_5px_20px_rgba(37,99,235,0.4)] hover:shadow-[0_5px_30px_rgba(37,99,235,0.6)] transform hover:scale-105 transition-all duration-300"
+            className="bg-primary text-white px-6 py-3 rounded-full shadow-[0_5px_20px_rgba(227,6,19,0.35)] hover:shadow-[0_5px_30px_rgba(227,6,19,0.5)] transform hover:scale-105 transition-all duration-300"
           />
         </div>
       </form>
