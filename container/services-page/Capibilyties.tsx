@@ -41,7 +41,7 @@ export default function Capibilyties() {
 				</motion.h1>
 			</div>
 			
-			<div className="w-full flex sm:flex-col xm:flex-col justify-between py-[20px] padding-x border-t border-blue-600/40 sm:gap-[15px] xm:gap-[15px] relative z-20">
+			<div className="w-full flex sm:flex-col xm:flex-col justify-between py-[20px] padding-x border-t border-white/30 sm:gap-[15px] xm:gap-[15px] relative z-20">
 				<div className="w-[10%] sm:w-full xm:w-full">
 					<motion.h3 
 						className="paragraph font-medium text-white font-NeueMontreal flex items-center"
