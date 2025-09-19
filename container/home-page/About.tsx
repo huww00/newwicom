@@ -5,6 +5,10 @@ import { aboutImg } from "@/public";
 import { LinkHover } from "@/animation";
 import { footerItems } from "@/constants";
 import { Heading, RoundButton } from "@/components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function About() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -174,45 +178,56 @@ export default function About() {
           </div>
         </div>
 
-        {/* Images grid with enhanced 3D effects */}
-        <div className="w-full lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 perspective-1000">
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className={`relative rounded-[15px] overflow-hidden transition-all duration-700 ease-[.215,.61,.355,1] cursor-pointer transform-style-3d ${
-                hoveredIndex === index 
-                  ? "scale-[0.97] rotate-x-5 rotate-y-5 shadow-xl" 
-                  : "shadow-md"
-              }`}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              style={{ 
-                transform: hoveredIndex === index 
-                  ? 'perspective(1000px) rotateX(5deg) rotateY(5deg) scale(0.97) translateZ(20px)' 
-                  : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1) translateZ(0)'
-              }}
-            >
-              <div className="relative w-full h-[250px] overflow-hidden">
-                <Image
-                  src={img}
-                  alt={`about-img-${index}`}
-                  fill
-                  className={`object-cover transition-all duration-[1.2s] ease-[.215,.61,.355,1] ${
-                    hoveredIndex === index ? "scale-[1.1] rotate-1" : ""
+        {/* Images carousel with larger slides */}
+        <div className="w-full lg:w-[60%]">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={24}
+            slidesPerView={1}
+            loop
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              1025: { slidesPerView: 2, spaceBetween: 24 },
+              769: { slidesPerView: 2, spaceBetween: 20 },
+              0: { slidesPerView: 1, spaceBetween: 16 },
+            }}
+            className="w-full"
+          >
+            {images.map((img, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className={`group relative rounded-[15px] overflow-hidden transition-all duration-700 ease-[.215,.61,.355,1] cursor-pointer transform-style-3d ${
+                    hoveredIndex === index
+                      ? "scale-[0.98] rotate-x-5 rotate-y-5 shadow-xl"
+                      : "shadow-md"
                   }`}
-                />
-                {/* Overlay with gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                
-                {/* Shine effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              </div>
-              
-              {/* 3D frame effect */}
-              <div className="absolute inset-0 rounded-[15px] border border-white/20 pointer-events-none"></div>
-              <div className="absolute -inset-1 rounded-[15px] border border-white/10 pointer-events-none"></div>
-            </div>
-          ))}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  style={{
+                    transform: hoveredIndex === index
+                      ? 'perspective(1000px) rotateX(5deg) rotateY(5deg) scale(0.98) translateZ(20px)'
+                      : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1) translateZ(0)'
+                  }}
+                >
+                  <div className="relative w-full h-[420px] lg:h-[420px] md:h-[360px] sm:h-[300px] overflow-hidden">
+                    <Image
+                      src={img}
+                      alt={`about-img-${index}`}
+                      fill
+                      className={`object-cover transition-all duration-[1.2s] ease-[.215,.61,.355,1] ${
+                        hoveredIndex === index ? "scale-[1.07] rotate-1" : ""
+                      }`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-1000"></div>
+                  </div>
+                  <div className="absolute inset-0 rounded-[15px] border border-white/20 pointer-events-none"></div>
+                  <div className="absolute -inset-1 rounded-[15px] border border-white/10 pointer-events-none"></div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
 
