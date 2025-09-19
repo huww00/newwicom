@@ -51,7 +51,7 @@ export default function About() {
         {mounted && particles.map((p, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-blue-200/40"
+            className="absolute rounded-full bg-primary/10"
             style={{
               width: `${p.size}px`,
               height: `${p.size}px`,
