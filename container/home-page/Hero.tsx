@@ -35,7 +35,7 @@ export default function Hero() {
 						className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight"
 					>
 						Empowering Connectivity with <br />
-						<span className="text-blue-400">ICOM Telecom</span>
+						<span className="text-primary">ICOM Telecom</span>
 					</motion.h1>
 
 					<motion.p
@@ -58,7 +58,7 @@ export default function Hero() {
 					>
 						<Link
 							href="/contact"
-							className="flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-medium shadow-md hover:bg-blue-700 transition"
+							className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-medium shadow-md hover:opacity-90 transition"
 						>
 							Start a Project <ArrowUpRight size={20} />
 						</Link>

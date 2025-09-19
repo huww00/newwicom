@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import { logo, mobileLogo } from "@/public";
 import { footernavbarItems } from "@/constants";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
@@ -14,12 +12,7 @@ export default function MobileNav() {
 		<>
 			<div className="w-full hidden justify-between items-center h-[8vh] padding-x sm:flex xm:flex md:flex">
 				<Link href={"/"}>
-					<Image
-						src={logo}
-						alt="ochi logo"
-						width={70}
-						height={70}
-					/>
+					<img src="https://cdn.builder.io/api/v1/image/assets%2F0420d24dcfb8433a827ecc0dd2ad6661%2F240965cea6b64a5b876ccf45119fb9ce?format=webp&width=160" alt="ICOM TELECOM" className="h-10 w-auto object-contain" />
 				</Link>
 				<HiOutlineMenuAlt4
 					onClick={() => setToggle(true)}
@@ -36,12 +29,7 @@ export default function MobileNav() {
 						className="fixed top-0 bottom-0 right-0 z-50 w-full min-h-screen flex justify-end items-end flex-col bg-secondry">
 						<div className="w-full flex justify-between items-center h-[8vh] border-b border-[#f1f1f155] padding-x">
 							<Link href={"/"}>
-								<Image
-									src={mobileLogo}
-									alt="ochi logo"
-									width={70}
-									height={70}
-								/>
+								<img src="https://cdn.builder.io/api/v1/image/assets%2F0420d24dcfb8433a827ecc0dd2ad6661%2F240965cea6b64a5b876ccf45119fb9ce?format=webp&width=160" alt="ICOM TELECOM" className="h-10 w-auto object-contain" />
 							</Link>
 							<IoMdClose
 								onClick={() => setToggle(false)}
@@ -53,7 +41,7 @@ export default function MobileNav() {
 								<Link
 									href={item.href}
 									key={item.id}
-									onClick={(toggle) => setToggle(!toggle)}
+									onClick={() => setToggle(false)}
 									className="text-[80px] leading-[67px] font-FoundersGrotesk uppercase font-bold tracking-[-.9] text-background">
 									{item.title}
 								</Link>

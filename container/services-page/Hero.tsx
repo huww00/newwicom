@@ -49,7 +49,7 @@ export default function Hero() {
 							We create&nbsp;
 							<span className="relative group cursor-pointer">
 								<span className="text-gray-900 font-medium relative z-10">eye-catching</span>
-								<span className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-lg transform group-hover:scale-105 transition-transform duration-300 -z-10"></span>
+								<span className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-400/20 rounded-lg transform group-hover:scale-105 transition-transform duration-300 -z-10"></span>
 							</span>
 							&nbsp;and&nbsp;
 							<span className="relative group cursor-pointer">
@@ -89,7 +89,7 @@ export default function Hero() {
 										className="flex flex-col gap-[20px] p-6 rounded-xl bg-white/50 backdrop-blur-sm border border-gray-200/60 shadow-sm hover:shadow-md transition-shadow duration-300"
 										whileHover={{ y: -5, transition: { duration: 0.2 } }}
 									>
-										<p className="paragraph font-NeueMontreal text-gray-900 underline decoration-blue-400 decoration-2">
+										<p className="paragraph font-NeueMontreal text-gray-900 underline decoration-primary decoration-2">
 											Goal defines it all
 										</p>
 										<p className="paragraph font-NeueMontreal text-gray-700 leading-relaxed">
@@ -152,7 +152,7 @@ export default function Hero() {
 			
 			{/* Subtle 3D Floating Elements */}
 			<motion.div 
-				className="absolute top-1/3 left-1/4 w-4 h-4 bg-blue-400/30 rounded-full"
+				className="absolute top-1/3 left-1/4 w-4 h-4 bg-primary/30 rounded-full"
 				animate={{
 					y: [0, -20, 0],
 				}}

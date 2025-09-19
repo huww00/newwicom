@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import { logo } from "@/public";
 import { LinkHover, TextMask } from "@/animation";
 import { footerItems, footernavbarItems } from "@/constants";
 
@@ -9,9 +7,9 @@ export default function Footer() {
 	const phrase1 = ["PRESENTATIONS"];
 	
 	return (
-		<footer className="w-full min-h-screen padding-x z-30 relative pt-[40px] bg-gradient-to-b from-blue-600 to-blue-800 flex flex-col justify-between rounded-t-[20px] mt-[-20px] transform-gpu perspective-1000">
+		<footer className="w-full min-h-screen padding-x z-30 relative pt-[40px] bg-primary flex flex-col justify-between rounded-t-[20px] mt-[-20px] transform-gpu perspective-1000">
 			{/* 3D Top Edge Effect */}
-			<div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-blue-700 to-blue-800 rounded-t-[20px] shadow-2xl"></div>
+			<div className="absolute top-0 left-0 w-full h-4 bg-primary/80 rounded-t-[20px] shadow-2xl"></div>
 			
 			<div className="w-full flex justify-between sm:flex-col xm:flex-col relative z-10">
 				<div className="flex flex-col justify-between sm:w-full xm:w-full w-1/2">
@@ -100,13 +98,7 @@ export default function Footer() {
 				<div className="w-1/2 sm:w-full xm:w-full transform-gpu hover:-translate-y-1 transition-transform duration-300">
 					<Link href={"/"}>
 						<div className="relative">
-							<Image
-								src={logo}
-								alt="IcomTelecom logo"
-								width={70}
-								height={70}
-								className="drop-shadow-lg filter brightness-125 transform-gpu hover:scale-110 transition-transform duration-500"
-							/>
+							<img src="https://cdn.builder.io/api/v1/image/assets%2F0420d24dcfb8433a827ecc0dd2ad6661%2F240965cea6b64a5b876ccf45119fb9ce?format=webp&width=160" alt="ICOM TELECOM" className="h-10 w-auto object-contain drop-shadow-lg filter brightness-125 transform-gpu hover:scale-110 transition-transform duration-500" />
 							{/* 3D shine effect on logo */}
 							<div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
 						</div>
@@ -134,7 +126,7 @@ export default function Footer() {
 			</div>
 			
 			{/* 3D Bottom Edge */}
-			<div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-blue-800 to-blue-900 rounded-b-[20px] shadow-inner-xl"></div>
+			<div className="absolute bottom-0 left-0 w-full h-6 bg-primary/90 rounded-b-[20px] shadow-inner-xl"></div>
 		</footer>
 	);
 }

@@ -14,7 +14,7 @@ export default function Process() {
 	return (
 		<section className="w-full padding-y relative">
 			{/* 3D Background Element */}
-			<div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-transparent -z-10 transform-gpu perspective-1000 rotate-x-5 scale-110 opacity-30"></div>
+			<div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent -z-10 transform-gpu perspective-1000 rotate-x-5 scale-110 opacity-30"></div>
 			
 			<div className="w-full padding-x mb-[40px] relative">
 				<motion.h1 
@@ -42,7 +42,7 @@ export default function Process() {
 					viewport={{ once: true }}
 				>
 					{/* 3D Depth Indicator */}
-					<div className={`absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-400 to-blue-600 opacity-0 transition-opacity duration-500 ${activeAccordion === item.id ? 'opacity-100' : ''}`}></div>
+					<div className={`absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-primary to-primary/90 opacity-0 transition-opacity duration-500 ${activeAccordion === item.id ? 'opacity-100' : ''}`}></div>
 					
 					<div className="w-full flex items-center justify-between py-[10px] padding-x">
 						<div className="w-[50%] sm:w-full xm:w-full">
@@ -67,13 +67,13 @@ export default function Process() {
 							<motion.button
 								className={`paragraph font-normal font-NeueMontreal uppercase transition-all duration-200 ease-in-out ${
 									activeAccordion === item.id
-										? "text-blue-600 font-medium"
+										? "text-primary font-medium"
 										: "text-secondry"
 								}`}
 								onClick={() => toggleAccordion(item.id)}
 								whileHover={{ 
 									scale: 1.05,
-									textShadow: "0px 0px 8px rgb(74, 144, 226)"
+									textShadow: "0px 0px 8px rgba(227, 6, 19, 0.6)"
 								}}
 								whileTap={{ scale: 0.95 }}
 							>
@@ -110,7 +110,7 @@ export default function Process() {
 											}
 										}}
 										style={{ originY: 0, transformStyle: 'preserve-3d' }}
-										className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-2xl border border-blue-100"
+										className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-2xl border border-primary/20"
 									>
 										<motion.div 
 											className="flex flex-col gap-[20px] py-[30px]"
