@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import { logo } from "@/public";
 import { useState } from "react";
 import { navVariants } from "@/motion";
 import { TextHover } from "@/animation";
@@ -28,13 +26,13 @@ export default function Navbar() {
 				className="w-full h-[8vh] padding-x fixed top-0 left-0 z-50 backdrop-blur-[7px] flex items-center justify-between sm:hidden xm:hidden md:hidden"
 				animate={hidden ? "hidden" : "vissible"}>
 				<div className="w-[50%]">
-	<Link
-  href="/"
-  className="text-2xl font-extrabold tracking-tight text-white hover:text-blue-300 transition-colors"
->
-  ICOM <span className="text-blue-300">TELECOM</span>
-</Link>
-
+					<Link href="/" className="inline-flex items-center gap-2">
+						<img
+							src="https://cdn.builder.io/api/v1/image/assets%2F0420d24dcfb8433a827ecc0dd2ad6661%2F240965cea6b64a5b876ccf45119fb9ce?format=webp&width=200"
+							alt="ICOM TELECOM"
+							className="h-10 w-auto object-contain"
+						/>
+					</Link>
 				</div>
 				<div className="flex gap-x-[20px] w-[50%]">
 					{navbarItems.map((item) => (

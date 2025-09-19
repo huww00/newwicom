@@ -13,17 +13,17 @@ export default function PartnersSwiper() {
     "/Logos/Alliancedesbuissness.png",
     "/Logos/logo-les-tricolores.png",
     "/Logos/axydislogo.png",
-    "/partners/logo6.png",
+    "/Logos/sfr.png",
   ];
 
   return (
-    <div className="w-full relative rounded-t-[20px] overflow-hidden py-12 bg-gradient-to-br from-indigo-900 via-blue-900 to-blue-700">
+    <div className="w-full relative rounded-t-[20px] overflow-hidden py-12 bg-primary">
       {/* Title */}
       <div className="text-center mb-10 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
           Our Trusted Partners
         </h2>
-        <p className="text-indigo-200 max-w-2xl mx-auto">
+        <p className="text-white/80 max-w-2xl mx-auto">
           Collaborating with industry leaders worldwide
         </p>
       </div>

@@ -6,6 +6,7 @@ import {
 	Process,
 	Archive,
 	Heroservices,
+	SecondaryHeader,
 } from "@/container";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
@@ -20,6 +21,7 @@ export default function Services() {
 	return (
 		<>
 			<Curve backgroundColor={"#f1f1f1"}>
+				<SecondaryHeader />
 				<Heroservices />
 				
 				<Process />

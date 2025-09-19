@@ -11,14 +11,14 @@ export default function Capibilyties() {
 	const [activeImage, setActiveImage] = useState(null);
 	
 	return (
-		<div className="w-full bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 padding-y rounded-t-[20px] shadow-2xl relative overflow-hidden">
+		<div className="w-full bg-primary padding-y rounded-t-[20px] shadow-2xl relative overflow-hidden">
 			{/* 3D Background Elements */}
-			<div className="absolute inset-0 bg-blue-950/20 z-0"></div>
-			<div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-blue-800 to-transparent z-10"></div>
+			<div className="absolute inset-0 bg-black/10 z-0"></div>
+			<div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-black/20 to-transparent z-10"></div>
 			
 			{/* Floating 3D Elements */}
-			<div className="absolute top-1/4 left-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl -z-10"></div>
-			<div className="absolute bottom-10 right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
+			<div className="absolute top-1/4 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+			<div className="absolute bottom-10 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
 			
 			<div className="w-[82%] sm:w-full xm:w-full padding-x mb-[70px] relative z-20">
 				<motion.h1 
@@ -28,20 +28,20 @@ export default function Capibilyties() {
 					transition={{ duration: 0.7 }}
 					viewport={{ once: true }}
 				>
-					<span className="xl:link-flash lg:link-flash md:link-flash cursor-pointer text-blue-300 hover:text-white transition-colors duration-300">
+					<span className="xl:link-flash lg:link-flash md:link-flash cursor-pointer text-white/90 hover:text-white transition-colors duration-300">
 						Let's be honest.
 					</span>
 					&nbsp;There are really no excuses to have a bad presentation anymore.
 					No one has time for poorly communicated ideas. Focus on what you do
 					best <span className="sm:hidden xm:hidden">—</span>
 					growing your business, while we do our best at
-					<span className="xl:link-flash lg:link-flash md:link-flash cursor-pointer text-blue-300 hover:text-white transition-colors duration-300">
+					<span className="xl:link-flash lg:link-flash md:link-flash cursor-pointer text-white/90 hover:text-white transition-colors duration-300">
 						&nbsp;making your presentations awesome.
 					</span>
 				</motion.h1>
 			</div>
 			
-			<div className="w-full flex sm:flex-col xm:flex-col justify-between py-[20px] padding-x border-t border-blue-600/40 sm:gap-[15px] xm:gap-[15px] relative z-20">
+			<div className="w-full flex sm:flex-col xm:flex-col justify-between py-[20px] padding-x border-t border-white/30 sm:gap-[15px] xm:gap-[15px] relative z-20">
 				<div className="w-[10%] sm:w-full xm:w-full">
 					<motion.h3 
 						className="paragraph font-medium text-white font-NeueMontreal flex items-center"
@@ -50,7 +50,7 @@ export default function Capibilyties() {
 						transition={{ duration: 0.5 }}
 						viewport={{ once: true }}
 					>
-						<span className="w-3 h-3 rounded-full bg-blue-400 mr-2 shadow-lg"></span>
+						<span className="w-3 h-3 rounded-full bg-white mr-2 shadow-lg"></span>
 						Our Capabilities:
 					</motion.h3>
 				</div>
@@ -73,7 +73,7 @@ export default function Capibilyties() {
 											animate={{ opacity: 1, scale: 1, rotateY: 0 }}
 											exit={{ opacity: 0, scale: 0.8, rotateY: 15 }}
 											transition={{ duration: 0.4 }}
-											className="w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-400/30 bg-blue-900/20 backdrop-blur-sm"
+											className="w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/30 bg-black/20 backdrop-blur-sm"
 											style={{ transformStyle: 'preserve-3d' }}
 										>
 											<Image
@@ -83,7 +83,7 @@ export default function Capibilyties() {
 												height={200}
 												className="w-full h-full object-cover"
 											/>
-											<div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+											<div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 										</motion.div>
 									)}
 									{(hovered1 && item.id === 1) && (
@@ -92,7 +92,7 @@ export default function Capibilyties() {
 											animate={{ opacity: 1, scale: 1, rotateY: 0 }}
 											exit={{ opacity: 0, scale: 0.8, rotateY: -15 }}
 											transition={{ duration: 0.4 }}
-											className="w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-400/30 bg-blue-900/20 backdrop-blur-sm"
+											className="w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/30 bg-black/20 backdrop-blur-sm"
 											style={{ transformStyle: 'preserve-3d' }}
 										>
 											<Image
@@ -102,16 +102,16 @@ export default function Capibilyties() {
 												height={200}
 												className="w-full h-full object-cover"
 											/>
-											<div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+											<div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 										</motion.div>
 									)}
 									{!hovered && !hovered1 && item.id === 1 && (
 										<motion.div
 											initial={{ opacity: 0 }}
 											animate={{ opacity: 1 }}
-											className="w-[300px] h-[200px] rounded-2xl flex items-center justify-center bg-blue-800/20 border-2 border-dashed border-blue-600/30 backdrop-blur-sm"
+											className="w-[300px] h-[200px] rounded-2xl flex items-center justify-center bg-black/20 border-2 border-dashed border-white/30 backdrop-blur-sm"
 										>
-											<p className="text-blue-300/70 font-medium">Hover over a capability to preview</p>
+											<p className="text-white/80 font-medium">Hover over a capability to preview</p>
 										</motion.div>
 									)}
 								</AnimatePresence>
@@ -125,7 +125,7 @@ export default function Capibilyties() {
 								>
 									<div className="flex items-center gap-x-[10px] pb-[20px]">
 										<motion.span 
-											className="w-[12px] h-[12px] rounded-full bg-blue-400 shadow-lg"
+											className="w-[12px] h-[12px] rounded-full bg-white shadow-lg"
 											whileHover={{ scale: 1.2 }}
 										/>
 										<h1 className="paragraph uppercase font-medium font-NeueMontreal text-white">
@@ -150,7 +150,7 @@ export default function Capibilyties() {
 											<Button
 												href={link.href}
 												title={link.title}
-												className="text-blue-100 hover:text-white transition-colors duration-300"
+												className="text-white/80 hover:text-white transition-colors duration-300"
 											/>
 										</motion.div>
 									))}
@@ -165,7 +165,7 @@ export default function Capibilyties() {
 								>
 									<div className="flex items-center gap-x-[10px] pb-[20px]">
 										<motion.span 
-											className="w-[12px] h-[12px] rounded-full bg-blue-400 shadow-lg"
+											className="w-[12px] h-[12px] rounded-full bg-white shadow-lg"
 											whileHover={{ scale: 1.2 }}
 										/>
 										<h1 className="paragraph uppercase font-medium font-NeueMontreal text-white">
@@ -190,7 +190,7 @@ export default function Capibilyties() {
 											<Button
 												href={link.href}
 												title={link.title}
-												className="text-blue-100 hover:text-white transition-colors duration-300"
+												className="text-white/80 hover:text-white transition-colors duration-300"
 											/>
 										</motion.div>
 									))}
@@ -202,7 +202,7 @@ export default function Capibilyties() {
 			</div>
 			
 			{/* 3D Bottom Edge */}
-			<div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-blue-950 to-transparent z-10"></div>
+			<div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/30 to-transparent z-10"></div>
 		</div>
 	);
 }
