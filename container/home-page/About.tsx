@@ -143,7 +143,7 @@ export default function About() {
                       className="relative overflow-hidden rounded-lg transition-transform duration-300 hover:-translate-y-0.5"
                     >
                       <LinkHover
-                        className="text-gray-700 hover:text-blue-600 transition-colors pl-2 relative z-10"
+                        className="text-gray-700 hover:text-primary transition-colors pl-2 relative z-10"
                         title={item.title}
                         href="/"
                       />
