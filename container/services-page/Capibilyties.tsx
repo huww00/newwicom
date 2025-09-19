@@ -111,7 +111,7 @@ export default function Capibilyties() {
 											animate={{ opacity: 1 }}
 											className="w-[300px] h-[200px] rounded-2xl flex items-center justify-center bg-blue-800/20 border-2 border-dashed border-blue-600/30 backdrop-blur-sm"
 										>
-											<p className="text-blue-300/70 font-medium">Hover over a capability to preview</p>
+											<p className="text-white/80 font-medium">Hover over a capability to preview</p>
 										</motion.div>
 									)}
 								</AnimatePresence>
